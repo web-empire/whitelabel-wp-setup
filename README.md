@@ -52,7 +52,7 @@ We understand the need for a quality product backed by dedicated support that ca
 
 <strong> Want To Contribute To The Plugin? </strong>
 
-You may now contribute to the plugin on Github: <a href="https://github.com/web-empire/whitelabel-wp-themes-plugins" target="_blank" rel="">Whitelabel WP Themes and Plugins on Github</a>
+You may now contribute to the plugin on Github: <a href="https://github.com/web-empire/whitelabel-wp-setup" target="_blank" rel="">Whitelabel WP Themes and Plugins on Github</a>
 
 ## Installation ##
 
