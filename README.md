@@ -40,6 +40,7 @@ You can configure all active plugin's details, like as follows,
     <li> <strong> Author: </strong> Plugin's author name. </li>
     <li> <strong> AuthorURI: </strong> Plugin author's URL. </li>
     <li> <strong> Title: </strong> Plugin's Title. </li>
+	<li> <strong> Version: </strong> Plugin's Version. </li>
     <li> <strong> AuthorName: </strong> Plugin's author name. </li>
 </ul>
 
