@@ -32,20 +32,20 @@ module.exports = function (grunt) {
                     '!package-lock.json',
                     '!phpcs.xml.dist',
                 ],
-                dest: 'whitelabel-wp-setup.php/'
+                dest: 'whitelabel-wp-setup/'
             }
         },
 
         compress: {
             main: {
                 options: {
-                    archive: 'whitelabel-wp-setup.php.zip',
+                    archive: 'whitelabel-wp-setup.zip',
                     mode: 'zip'
                 },
                 files: [
                     {
                         src: [
-                            './whitelabel-wp-setup.php/**'
+                            './whitelabel-wp-setup/**'
                         ]
 
                     }
@@ -54,8 +54,8 @@ module.exports = function (grunt) {
         },
 
         clean: {
-            main: ["whitelabel-wp-setup.php"],
-            zip: ["whitelabel-wp-setup.php.zip"],
+            main: ["whitelabel-wp-setup"],
+            zip: ["*.zip"],
         },
 
         makepot: {
