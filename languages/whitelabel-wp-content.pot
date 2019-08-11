@@ -1,0 +1,108 @@
+# Copyright (C) 2019 WebEmpire
+# This file is distributed under the same license as the Whitelabel WP Setup package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Whitelabel WP Setup 1.0.0\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/whitelabel-wp-setup\n"
+"POT-Creation-Date: 2019-08-11 10:14:39+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:217
+msgid "Processing..."
+msgstr ""
+
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:218
+msgid "Done"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Whitelabel WP Setup"
+msgstr ""
+
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:271
+msgid "Active Theme"
+msgstr ""
+
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:316
+msgid "Active Plugins"
+msgstr ""
+
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:388
+msgid "Now Let's be a Brand of the setup!"
+msgstr ""
+
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:426
+msgid ""
+"This plugin grants you priviledge to update branding of all the plugins on "
+"the plugins page."
+msgstr ""
+
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:462
+msgid "Save Settings"
+msgstr ""
+
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:524
+msgid "Hide this plugin."
+msgstr ""
+
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:525
+msgid "Whitelabel Themes."
+msgstr ""
+
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:526
+msgid "Get Whitelabelled Child Theme Generator."
+msgstr ""
+
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:527
+msgid "Update Branding Permanently through wp-config file."
+msgstr ""
+
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:528
+msgid "Much More with Improvements."
+msgstr ""
+
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:552
+msgid "Upcoming Features"
+msgstr ""
+
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:568
+msgid ""
+"You can contribute to improvise this plugin or can give us suggessions to "
+"make it more better. Your contribution will highly appreciated!"
+msgstr ""
+
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:574
+msgid "Send a Suggession »"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"This plugin is useful for whitelabel anything from the wp-content area. "
+"This plugin gives you priviledge to whitelabel WP active theme and plugins."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WebEmpire"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://webempire.org.in/"
+msgstr ""

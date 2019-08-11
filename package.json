@@ -1,0 +1,36 @@
+{
+  "name": "whitelabel-wp-themes-plugins",
+  "version": "1.0.0",
+  "description": "This plugin is useful for whitelabel anything from the wp-content area. This plugin gives you priviledge for whitelabel WP active theme and plugins.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "dependencies": {
+    "moment-timezone": "^0.5.17",
+    "node-minify": "^3.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.6",
+    "grunt": "^1.0.4",
+    "grunt-bumpup": "^0.6.3",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-compress": "^1.4.3",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "~2.2.1",
+    "grunt-contrib-uglify": "~3.3.0",
+    "grunt-postcss": "^0.9.0",
+    "grunt-rtlcss": "^2.0.1",
+    "grunt-text-replace": "^0.4.0",
+    "grunt-wp-i18n": "^1.0.2",
+    "grunt-wp-readme-to-markdown": "^2.0.1",
+    "postcss-flexibility": "^2.0.0",
+    "shelljs": "^0.8.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/web-empire/whitelabel-wp-themes-plugins"
+  },
+  "author": "WebEmpire",
+  "license": "ISC"
+}

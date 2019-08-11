@@ -1,0 +1,427 @@
+/**
+ * Whitelabel CSS
+ */
+body.settings_page_whitelabel-wp-content {
+    background: rgba(249,235,235,0.38);
+}
+.whitelabel-wp-content-wrap {
+	display: flex;
+	padding: 0 20px;
+}
+.whitelabel-wp-content-pages-wrap,
+.whitelabel-wp-content-site-wrap {
+	width: 50%;
+}
+.whitelabel-wp-content-site-wrap table {
+    margin-top: unset;
+}
+.whitelabel-wp-content-site-wrap table tr:first-child th,
+.whitelabel-wp-content-site-wrap table tr:first-child td {
+    padding-top: 0;
+}
+.whitelabel-wp-content-wrap .form-table th {
+    width: 130px;
+    padding: 20px 15px 20px 0;
+}
+.whitelabel-wp-content-wrap .dashicons-before {
+    margin-right: 10px;
+    color: #591fc6;
+}
+.whitelabel-wp-content__title {
+    cursor: pointer;
+    padding: 20px 10px;
+}
+.active-plugins-list .item {
+    margin-bottom: 20px;
+}
+.whitelabel-wp-content__page-wrap {
+    display: none;
+	background: #e2ebff;
+    margin-bottom: 15px;
+    border: 1px solid #ddd7ec;
+}
+.whitelabel-wp-content__table-wrap {
+    display: none;
+}
+.whitelabel-wp-content__title h3 {
+	position: relative;
+    margin: 0.2em .4em;
+    padding-left: 3px;
+}
+.whitelabel-wp-content__title h3:after {
+	content: "+";
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 30px;
+    color: #333;
+    font-weight: bold;
+}
+.whitelabel-wp-content__page-wrap.whitelabel-item__open h3:after{
+    content: "-";
+}
+a.update_whitelabel_data.submit.button.button-primary.button-hero.installing.updating-message:before {
+    vertical-align: middle;
+    margin-top: -5px;
+}
+.whitelabel__content-hide .whitelabel-content__page-row {
+    display: none;
+}
+.whitelabel-wp-content__page-wrap.whitelabel-item__open .whitelabel-wp-content__table-wrap {
+    display: table-row;
+    padding-right: 25px;
+}
+.whitelabel-content__page-row th {
+    vertical-align: middle;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.whitelabel-content__page-row input,
+.whitelabel-content__page-row textarea {
+    width: 100%;
+}
+.whitelabel-content__page-row label {
+    display: grid;
+}
+.network-active {
+    padding: 1px 4px;
+    border-radius: 2px;
+    margin-left: 5px;
+    font-size: 10px;
+    font-weight: 500;
+    color: #0185ba;
+}
+a.submit.button.button-primary.whitelabel-wp-content {
+    position: absolute;
+}
+
+.whitelabel-wp-content__page-wrap.whitelabel-pro-features {
+    display: block;
+}
+.widget-feature b.feature {
+    font-size: 18px;
+    margin-right: 15px;
+    color: #8141bb;
+}
+
+.white-label-notice.notice{
+    margin: 5px 0;
+    padding-left: 0;
+}
+.white-label-notice .dashicons{
+    margin: 0 5px 0 0;
+}
+
+/*
+ * New brand CSS
+ */
+.whitelabel-wp-content__page-wrap.whitelabel-item__open .whitelabel-wp-content__title {
+    padding: 20px 10px;
+    background: #8141bb;
+}
+.whitelabel-wp-content__page-wrap.whitelabel-item__open.whitelabel-this-plugin {
+    background: #eaf0f9;
+}
+.whitelabel-wp-content__page-wrap.whitelabel-item__open .whitelabel-wp-content__title h3,
+.whitelabel-wp-content__page-wrap.whitelabel-item__open h3:after {
+    color: #fff;
+}
+.whitelabel-wp-content__table-wrap table.form-table,
+.whitelabel-wp-content__table-wrap p {
+    margin-left: 20px;
+}
+.settings_page_whitelabel-wp-content #wpcontent {
+	padding-left: 0;
+}
+.settings_page_whitelabel-wp-content #wpcontent .form-whitelabel-wp {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.social-menu-page-header {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.below-header-menu {
+    background-color: #8141bb;
+    text-align: right;
+    padding: 15px 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 0 #efefef, 0 2px 2px #ececec;
+}
+.below-header-menu a {
+    text-decoration: unset;
+    
+    color: #fff;
+}
+.below-header-menu a:not(:last-child) {
+    margin-right: 15px;
+}
+.social-flex {
+	-js-display: flex;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-align-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+}
+.social-container {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+.social-title {
+	flex: auto;
+	align-content: flex-start;
+	text-align: left;
+	margin: 10px 0;
+}
+.social-title a,
+.social-title span {
+	display: block;
+	outline: none;
+	box-shadow: none;
+	font-size: 1.5rem;
+	color: #333333;
+	font-weight: 500;
+}
+.social-title > a {
+    display: flex;
+    align-items: center;
+    text-decoration: unset;
+}
+.social-title .social-plugin-version {
+    background-color: #8141bb;
+    border-radius: 3px;
+    font-size: 0.5em;
+    font-weight: 400;
+    margin-left: 10px;
+    padding: 2px 7px;
+	color: #fff;
+	margin-top: 10px;
+}
+.social-container .social-title .plug-author-title {
+	font-size: 25px;
+    font-weight: bold;
+}
+.social-top-links {
+    font-weight: bold;
+    letter-spacing: 0.1px;
+	font-style: italic;
+}
+a.update_whitelabel_data.submit {
+    margin-left: 20px;
+}
+.whitelabel-wp-content-wrap .description:first-child {
+    margin-top: 20px;
+}
+.whitelabel-content__page-row td {
+    display: flex;
+    position: relative;
+}
+.whitelabel-field-help {
+    margin-top: 5px;
+    margin-right: 20px;
+    color: #8141bb;
+    cursor: help;
+}
+.whitelabel-tooltip-text {
+    background: #8141bb;
+    border-radius: 3px;
+    color: #fff;
+    height: auto;
+    margin-top: 10px;
+    position: absolute;
+    padding: 10px;
+    top: 35px;
+    left: -35px;
+    display: none;
+    z-index: 10000;
+}
+span.whitelabel-tooltip-text.display_tool_tip img {
+    width:500px;
+    margin-top: 20px;
+}
+.whitelabel-tooltip-text::before {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid #8141bb;
+    bottom: auto;
+    content: " ";
+    font-size: 0;
+    left: 56px;
+    line-height: 0;
+    margin-left: -5px;
+    position: absolute;
+    top: -10px;
+    width: 0;
+}
+.display_tool_tip {
+    display: block;
+}
+
+/* Flip checkbox style */
+
+/* Common CSS */
+.switch {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 25px;
+    padding: 3px;
+    margin: 0 10px 10px 0;
+    background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+    background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+    border-radius: 18px;
+    box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    box-sizing:content-box;
+}
+.switch-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    box-sizing:content-box;
+}
+.switch-label {
+    position: relative;
+    display: block;
+    height: inherit;
+    font-size: 12px;
+    text-transform: uppercase;
+    background: #eceeef;
+    border-radius: inherit;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+    box-sizing:content-box;
+}
+.switch-label:before, .switch-label:after {
+    position: absolute;
+    top: 50%;
+    margin-top: -.5em;
+    line-height: 1;
+    -webkit-transition: inherit;
+    -moz-transition: inherit;
+    -o-transition: inherit;
+    transition: inherit;
+    box-sizing:content-box;
+}
+.switch-label:before {
+    content: attr(data-off);
+    right: 11px;
+    color: #aaaaaa;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+.switch-label:after {
+    content: attr(data-on);
+    left: 11px;
+    color: #FFFFFF;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+.switch-input:checked ~ .switch-label {
+    background: #E1B42B;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.switch-input:checked ~ .switch-label:before {
+    opacity: 0;
+}
+.switch-input:checked ~ .switch-label:after {
+    opacity: 1;
+}
+.switch-input:checked ~ .switch-handle {
+    left: 74px;
+    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Transition
+========================== */
+.switch-label, .switch-handle {
+    transition: All 0.3s ease;
+    -webkit-transition: All 0.3s ease;
+    -moz-transition: All 0.3s ease;
+    -o-transition: All 0.3s ease;
+}
+
+/* Switch Yes No Toggle */
+.switch-yes-no {
+    padding: 0;
+    margin: 6px 15px 0 0;
+    border-radius: 0;
+    background-image: none;
+}
+.switch-yes-no .switch-label {
+    box-shadow: none;
+    -webkit-transform: skew(-20deg);
+    transform: skew(-20deg);
+}
+.switch-yes-no .switch-label:after, .switch-yes-no .switch-label:before {
+    width: 100%;
+    height: 70%;
+    top: 5px;
+    left: 0;
+    text-align: center;
+    padding-top: 10%;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.switch-yes-no .switch-label:after {
+    color: #FFFFFF;
+    background: #8141bb;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+.switch-yes-no .switch-label:before {
+    background: #eaf0f9;
+    backface-visibility: hidden;
+}
+.switch-yes-no .switch-handle {
+    display: none;
+}
+.switch-yes-no .switch-input:checked ~ .switch-label {
+    background: #0088cc;
+    border-color: #0088cc;
+}
+.switch-yes-no .switch-input:checked ~ .switch-label:before {
+    transform: rotateY(180deg)
+}
+.switch-yes-no .switch-input:checked ~ .switch-label:after {
+    transform: rotateY(0)
+}
+
+/* Responsive CSS */
+
+@media(max-width:768px) {
+    .whitelabel-wp-content-wrap {
+        display: block;
+        padding: 20px;
+    }
+    .whitelabel-wp-content-pages-wrap, 
+    .whitelabel-wp-content-site-wrap,
+    .whitelabel-wp-content-wrap .form-table th {
+        width: 100%;
+    }
+
+    .whitelabel-content__page-row td {
+        width: 90%;
+    }
+    .whitelabel-wp-content__page-wrap.whitelabel-item__open .whitelabel-wp-content__table-wrap {
+        padding-bottom: 20px;
+    }
+    .whitelabel-wp-content-site-wrap th {
+        margin-bottom: 20px;
+    }
+}
