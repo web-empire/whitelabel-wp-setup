@@ -76,6 +76,11 @@ if ( ! class_exists( 'Whitelabel_WP_Meta_Fields' ) ) :
                     $meta_key = esc_url( $meta_key );
                     break;
 
+                case 'Version':
+                    $type = 'number';
+                    $meta_key = esc_attr( $meta_key );
+                    break;
+
                 default:
                     $type = 'text';
                     $meta_key = esc_attr( $meta_key );
@@ -94,7 +99,7 @@ if ( ! class_exists( 'Whitelabel_WP_Meta_Fields' ) ) :
 				$field_html     .= '<span class="whitelabel-tooltip-text">';
                 $field_html     .= $help;
                 $help_img_url    = WHITELABEL_WP_CONTENT_URL . 'assets/img/whitelabel-help-' . $value .  '.png';
-                $field_html     .= '<span><img src="' . $help_img_url . '" class="whitelabel-tooltip-image"></span>';
+                $field_html     .= '<br/><span><img src="' . $help_img_url . '" class="whitelabel-tooltip-image"></span>';
 				$field_html     .= '</span>';
 			}
 

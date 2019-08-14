@@ -49,7 +49,7 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 		 * @access private
 		 * @since 1.0.0
 		 */
-		private static $whitelabeled_wp_data = array();
+		public static $whitelabeled_wp_data = array();
 
 		/**
 		 * Whitelabeled new plugin sequence
@@ -73,7 +73,7 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_whitelabel_scripts' ) );
 
 			// Ajax handler.
-			add_action( 'wp_ajax_whitelabel_wp_environment', __CLASS__ . '::whitelabel_wp_environment' );
+			add_action( 'wp_ajax_whitelabel_wp_environment', array( $this, 'whitelabel_wp_environment' ) );
 
 			// Register Admin Menu page.
 			if( is_multisite() ) {
@@ -169,14 +169,18 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 		 */
 		public static function whitelabel_wp_environment() {
 
+			check_ajax_referer( 'whitelabel-admin-nonce', 'security' );
+
 			/**
 			 * Set Whitelabel processed Plugins.
 			 */
-			$required_meta_data = null;
-			
-			if ( isset( $_POST['required_meta_data'] ) ) {
-				$required_meta_data =  json_decode( stripslashes( $_POST['required_meta_data'] ) );
-				if( is_multisite() ) {
+			// $required_meta_data = null;
+			$is_multisite = is_multisite();
+
+			$required_meta_data = self::sanitize_plugin_checkboxes( json_decode( wp_unslash( $_POST['required_meta_data'] ) ) );
+
+			if( isset( $required_meta_data ) ) {
+				if( $is_multisite ) {
 					update_site_option( 'site_whitelabelled_plugins', $required_meta_data );
 				} else {
 					update_option( 'site_whitelabelled_plugins', $required_meta_data );
@@ -184,13 +188,12 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 			}
 
 			/**
-			 * Set whitelabeled processed data.
+			 * Set Whitelabel processed Data.
 			 */
-			$site_whitelabel_meta = null;
-			
-			if ( isset( $_POST['site_whitelabel_meta'] ) ) {
-				$site_whitelabel_meta = $_POST['site_whitelabel_meta'];
-				if( is_multisite() ) {
+			$site_whitelabel_meta = self::sanitize_form_inputs( $_POST['site_whitelabel_meta'] );
+
+			if( isset( $site_whitelabel_meta ) ) {
+				if( $is_multisite ) {
 					update_site_option( 'site_whitelabelled_data', $site_whitelabel_meta );
 				} else {
 					update_option( 'site_whitelabelled_data', $site_whitelabel_meta );
@@ -198,6 +201,66 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 			}
 
 			wp_send_json_success();
+		}
+
+		/**
+		 * Loop through the checkboxes and sanitize each of the values.
+		 *
+		 * @param array $input_settings input settings.
+		 * @return array
+		 */
+		public static function sanitize_plugin_checkboxes( $input_settings = array() ) {
+			if( ! empty( $input_settings ) ) {
+				foreach ( $input_settings as $plugin_key => $plugin ) {
+					foreach ( $plugin as $meta => $meta_key ) {
+						$meta_key = sanitize_key( $meta_key );
+					}
+				}
+			}
+			return $input_settings;
+		}
+
+		/**
+		 * Loop through the input and sanitize each of the values.
+		 *
+		 * @param array $input_settings input settings.
+		 * @return array
+		 */
+		public static function sanitize_form_inputs( $input_settings = array() ) {
+			if ( ! empty( $input_settings ) ) {
+				foreach ( $input_settings as $data => $key ) {
+					foreach ( $key['required_meta_data'] as $required_meta => $final_meta ) {
+						foreach ( $final_meta as $meta => $meta_key ) {
+							if( ! empty( $meta_key ) ) {
+								switch ( $meta ) {
+									case 'Name':
+									case 'Author':
+										$meta_key = sanitize_text_field( $meta_key );
+										break;
+
+									case 'Version':
+										$meta_key = floatval( wp_unslash( $meta_key ) );
+										break;
+
+									case 'PluginURI':
+									case 'AuthorURI':
+										$meta_key = esc_url( $meta_key );
+										break;
+
+									case 'Description':
+										$meta_key = sanitize_textarea_field( $meta_key );
+										break;
+
+									default:
+										$meta_key = sanitize_text_field( $meta_key );
+										break;
+								}
+							}
+						}
+					}
+				}
+			}
+			return $input_settings;
 		}
 
 		/**
@@ -216,6 +279,7 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 			$translation_array = array(
 				'processing'                => esc_html__( 'Processing...', 'whitelabel-wp-content' ),
 				'processed'                 => esc_html__( 'Done', 'whitelabel-wp-content' ),
+				'ajax_nonce'           		=> wp_create_nonce( 'whitelabel-admin-nonce' ),
 			);
 			wp_localize_script( 'whitelabel-wp-content-js', 'whitelabelLocalizeStings', $translation_array );
 
@@ -234,7 +298,7 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 		 */
 		public function register_network_whitelabel_menu() {
 
-			if ( ! is_super_admin() ) {
+			if ( ! current_user_can( 'manage_options' ) ) {
 				return;
 			}
 
@@ -249,7 +313,7 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 		 */
 		public function register_whitelabel_menu() {
 
-			if( ! is_admin() ) {
+			if ( ! current_user_can( 'manage_options' ) ) {
 				return;
 			}
 

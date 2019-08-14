@@ -11,6 +11,7 @@
 
 			$( ".whitelabel-wp-content__page-wrap:first-child" ).addClass( "whitelabel-item__open" );
 			WhitelabelWPContent._select_plugins();
+			WhitelabelWPContent._add_tool_tip_msg();
 		},
 
 		/**
@@ -18,6 +19,7 @@
 		 */
 		_bind: function()
 		{
+			$( document ).on( 'hover', '.whitelabel-field-help', WhitelabelWPContent._add_tool_tip_msg );
 			$( document ).on( 'click', '.update_whitelabel_data',	WhitelabelWPContent._whitelabel_data );
 			$( document ).on( 'click', '.whitelabel-wp-content__title', WhitelabelWPContent._toggle_plugin_settings );
 			$( document ).on( 'change', '.required-plugins', WhitelabelWPContent._select_respective_plugins );
@@ -108,6 +110,7 @@
 
 			var data = {
 				action: 'whitelabel_wp_environment',
+				security: whitelabelLocalizeStings.ajax_nonce,
 				required_meta_data: JSON.stringify( requiredPlugins ),
 				site_whitelabel_meta: whitelabelMeta,
 			}
@@ -148,6 +151,15 @@
 		},
 
 		/**
+		 * Tooltip.
+		 */
+		_add_tool_tip_msg: function(event) {
+			var tip_wrap = $(this).closest('.whitelabel-content__page-row');
+			closest_tooltip = tip_wrap.find('.whitelabel-tooltip-text');
+			closest_tooltip.toggleClass('display_tool_tip');
+		},
+
+		/**
 		 * Select Respective Plugins
 		 */
 		_select_respective_plugins: function( event ) {
@@ -172,26 +184,8 @@
 	 * Initialization
 	 */
 	$( function() {
+		"use strict";
 		WhitelabelWPContent.init();
 	});
-
-})(jQuery);
-
-
-(function($) {
-
-	function add_tool_tip_msg() {
-
-		$('.whitelabel-field-help').hover(function() {
-			var tip_wrap = $(this).closest('.whitelabel-content__page-row');
-			closest_tooltip = tip_wrap.find('.whitelabel-tooltip-text');
-			closest_tooltip.toggleClass('display_tool_tip');
-	    });
-	}
-
-	$(document).ready(function($) {
-		/* Enable Tooltip Field */
-		add_tool_tip_msg();
-	})
 
 })(jQuery);
