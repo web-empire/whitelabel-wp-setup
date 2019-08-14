@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Whitelabel WP Setup 1.0.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/whitelabel-wp-setup\n"
-"POT-Creation-Date: 2019-08-11 10:14:39+00:00\n"
+"POT-Creation-Date: 2019-08-14 18:27:04+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,11 +25,11 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:217
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:280
 msgid "Processing..."
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:218
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:281
 msgid "Done"
 msgstr ""
 
@@ -37,59 +37,59 @@ msgstr ""
 msgid "Whitelabel WP Setup"
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:271
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:335
 msgid "Active Theme"
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:316
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:380
 msgid "Active Plugins"
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:388
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:452
 msgid "Now Let's be a Brand of the setup!"
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:426
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:490
 msgid ""
 "This plugin grants you priviledge to update branding of all the plugins on "
 "the plugins page."
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:462
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:526
 msgid "Save Settings"
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:524
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:588
 msgid "Hide this plugin."
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:525
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:589
 msgid "Whitelabel Themes."
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:526
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:590
 msgid "Get Whitelabelled Child Theme Generator."
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:527
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:591
 msgid "Update Branding Permanently through wp-config file."
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:528
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:592
 msgid "Much More with Improvements."
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:552
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:616
 msgid "Upcoming Features"
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:568
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:632
 msgid ""
 "You can contribute to improvise this plugin or can give us suggessions to "
 "make it more better. Your contribution will highly appreciated!"
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:574
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:638
 msgid "Send a Suggession »"
 msgstr ""
 
