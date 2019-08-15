@@ -19,16 +19,15 @@ This is an amazing WordPress plugin which grants you priviledge for building you
 <strong> Configure Setup </strong>
 
 <ul>
- 	<li> <strong> Single Site: </strong> For the single site setup you will get the `Whitelabel WP Setup` submenu under the settings Menu. </li>
- 	<li> <strong> Network Setup: </strong> For the Multi (network) site setup you will get the `Whitelabel WP Setup` submenu from the Network Admin Dashboard under the Settings Menu. </li>
+ 	<li> <strong> Single Site: </strong> For the single site setup you will get the <strong>Whitelabel WP Setup</strong> submenu under the settings Menu. </li>
+ 	<li> <strong> Network Setup: </strong> For the Multi (network) site setup you will get the <strong>Whitelabel WP Setup</strong> submenu from the Network Admin Dashboard under the Settings Menu. </li>
 </ul>
-
 
 <strong> Now you are able to Whitelabel all your WP Content </strong>
 
 <ul>
- 	<li> <strong> Theme: </strong> This plugin grants you permission for whitelabel active theme. </li>
- 	<li> <strong> Plugins: </strong> Users can also whitelabel all the active plugins. </li>
+	<li> <strong> Plugins: </strong> Users can also whitelabel all the active plugins. </li>
+ 	<li> <strong> Theme: </strong> This plugin grants you permission for whitelabel active theme. <em> Coming Soon...</em> </li>
 </ul>
 
 You can configure all active plugin's details, like as follows,
@@ -46,9 +45,11 @@ You can configure all active plugin's details, like as follows,
 
 <strong> Now brand yourself with all WP-Content entities. </strong>
 
-Support That Cares!
+<strong>Support That Cares!</strong>
 
 We understand the need for a quality product backed by dedicated support that cares. We are here to listen to all your queries and help you make the most out of our plugin.
+
+<a href="https://webempire.org.in/support/?utm_source=google&utm_medium=email&utm_campaign=whitelabel-wp-setup" target="_blank" rel=""> Need help? We are just a click away! </a>
 
 <strong> Want To Contribute To The Plugin? </strong>
 
