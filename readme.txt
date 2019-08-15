@@ -58,7 +58,7 @@ You may now contribute to the plugin on Github: <a href="https://github.com/web-
 
 1. Upload `whitelabel-wp-setup.zip` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Under the Tools menu you will get `Whitelabel WP Content` menu listed
+3. Under the Tools menu you will get `Whitelabel WP Setup` menu listed
 4. You can configure the settings from there.
 
 == Changelog ==
