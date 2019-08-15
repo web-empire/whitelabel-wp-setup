@@ -41,43 +41,45 @@ if ( ! class_exists( 'Whitelabel_Branding' ) ) :
 			if ( ! empty( $whitelabeled_wp_data ) ) {
 				foreach ( $whitelabeled_wp_data as $data => $key ) {
 					$basename      = $key['init'];
-					foreach ( $key['required_meta_data'] as $required_meta => $final_meta ) {
-						foreach ( $final_meta as $meta => $meta_key ) {
-							if( ! empty( $meta_key ) ) {
-								switch ( $meta ) {
-									case 'Name':
-										$plugins[ $basename ]['Name'] = esc_attr( $meta_key );
-										$plugins[ $basename ]['Title'] = esc_attr( $meta_key );
-										break;
+					if ( isset( $plugins[ $basename ] ) ) {
+						foreach ( $key['required_meta_data'] as $required_meta => $final_meta ) {
+							foreach ( $final_meta as $meta => $meta_key ) {
+								if( ! empty( $meta_key ) ) {
+									switch ( $meta ) {
+										case 'Name':
+											$plugins[ $basename ]['Name'] = esc_attr( $meta_key );
+											$plugins[ $basename ]['Title'] = esc_attr( $meta_key );
+											break;
 
-									case 'Author':
-										$plugins[ $basename ]['Author'] = esc_attr( $meta_key );
-										$plugins[ $basename ]['AuthorName'] = esc_attr( $meta_key );
-										break;
+										case 'Author':
+											$plugins[ $basename ]['Author'] = esc_attr( $meta_key );
+											$plugins[ $basename ]['AuthorName'] = esc_attr( $meta_key );
+											break;
 
-									case 'Version':
-										$plugins[ $basename ]['Version'] = esc_attr( $meta_key );
-										break;
+										case 'Version':
+											$plugins[ $basename ]['Version'] = esc_attr( $meta_key );
+											break;
 
-									case 'DomainPath':
-										$plugins[ $basename ]['DomainPath'] = esc_attr( $meta_key );
-										break;
+										case 'DomainPath':
+											$plugins[ $basename ]['DomainPath'] = esc_attr( $meta_key );
+											break;
 
-									case 'Network':
-										$plugins[ $basename ]['Network'] = esc_attr( $meta_key );
-										break;
+										case 'Network':
+											$plugins[ $basename ]['Network'] = esc_attr( $meta_key );
+											break;
 
-									case 'PluginURI':
-										$plugins[ $basename ]['PluginURI'] = esc_url( $meta_key );
-										break;
+										case 'PluginURI':
+											$plugins[ $basename ]['PluginURI'] = esc_url( $meta_key );
+											break;
 
-									case 'AuthorURI':
-										$plugins[ $basename ]['AuthorURI'] = esc_url( $meta_key );
-										break;
+										case 'AuthorURI':
+											$plugins[ $basename ]['AuthorURI'] = esc_url( $meta_key );
+											break;
 
-									case 'Description':
-										$plugins[ $basename ]['Description'] = esc_textarea( $meta_key );
-										break;
+										case 'Description':
+											$plugins[ $basename ]['Description'] = esc_textarea( $meta_key );
+											break;
+									}
 								}
 							}
 						}

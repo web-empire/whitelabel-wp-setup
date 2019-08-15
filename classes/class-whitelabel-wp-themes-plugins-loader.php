@@ -271,9 +271,9 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 		 */
 		public function enqueue_whitelabel_scripts( $hook ) {
 
-			wp_register_script( 'whitelabel-wp-content-js', WHITELABEL_WP_CONTENT_URL . 'assets/js/whitelabel-wp-content.min.js', array( 'jquery', 'jquery-ui-sortable' ), WHITELABEL_WP_CONTENT_VER, true );
+			wp_register_script( 'whitelabel-wp-content-js', WHITELABEL_WP_CONTENT_URL . 'assets/js/whitelabel-wp-content.js', array( 'jquery', 'jquery-ui-sortable' ), WHITELABEL_WP_CONTENT_VER, true );
 
-			wp_register_style( 'whitelabel-wp-content-css', WHITELABEL_WP_CONTENT_URL . 'assets/css/whitelabel-wp-content.min.css', null, WHITELABEL_WP_CONTENT_VER, 'all' );
+			wp_register_style( 'whitelabel-wp-content-css', WHITELABEL_WP_CONTENT_URL . 'assets/css/whitelabel-wp-content.css', null, WHITELABEL_WP_CONTENT_VER, 'all' );
 
 			// Localize the script with new data.
 			$translation_array = array(
@@ -365,8 +365,10 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 			if ( ! empty( $stored_plugins ) ) {
 				foreach ( $stored_plugins as $plugin_key => $plugin ) {
 					$exist_plugins[]               = $plugin->init;
-					$new_sequence[ $plugin->init ] = $plugins[ $plugin->init ];
-					unset( $plugins[ $plugin->init ] );
+					if ( isset( $plugins[ $plugin->init ] ) ) {
+						$new_sequence[ $plugin->init ] = $plugins[ $plugin->init ];
+						unset( $plugins[ $plugin->init ] );
+					}
 				}
 			}
 
@@ -679,7 +681,6 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 			}
 
 			$whitelabeled_wp_data = self::$whitelabeled_wp_data;
-			$decoded_data = array();
 			$flag = false;
 			$meta_key = $key;
 
@@ -721,7 +722,7 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 										'name'         => $plugin_slug,
 										'value'   	   => sanitize_textarea_field( $meta_key ),
 										'flag'		   => $flag,
-										'help'		   => 'Here is the setting of ' . $detail . '.',
+										'help'		   => 'Here is the setting of plugin\'s ' . $detail . '.',
 									)
 								);
 							break;
@@ -733,7 +734,7 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 										'name'         => $plugin_slug,
 										'value'   	   => sanitize_text_field( $meta_key ),
 										'flag'		   => $flag,
-										'help'		   => 'Here is the setting of ' . $detail . '.',
+										'help'		   => 'Here is the setting of plugin\'s ' . $detail . '.',
 									)
 								);
 							break;
