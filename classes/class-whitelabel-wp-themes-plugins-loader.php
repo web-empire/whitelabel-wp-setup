@@ -239,7 +239,7 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 										break;
 
 									case 'Version':
-										$meta_key = floatval( wp_unslash( $meta_key ) );
+										$meta_key = filter_var( $meta_key, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
 										break;
 
 									case 'PluginURI':

@@ -57,7 +57,7 @@ if ( ! class_exists( 'Whitelabel_Branding' ) ) :
 											break;
 
 										case 'Version':
-											$plugins[ $basename ]['Version'] = esc_attr( $meta_key );
+											$plugins[ $basename ]['Version'] = floatval( esc_attr( $meta_key ) );
 											break;
 
 										case 'DomainPath':

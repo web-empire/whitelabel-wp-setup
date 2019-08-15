@@ -54,6 +54,23 @@ We understand the need for a quality product backed by dedicated support that ca
 
 You may now contribute to the plugin on Github: <a href="https://github.com/web-empire/whitelabel-wp-setup" target="_blank" rel="">Whitelabel WP Setup on Github</a>
 
+## Screenshots ##
+
+1. Initial plugins view (Before Whitelabel)
+2. Backend options to update whitelabel settings for existing  `WP-Content` entities
+3. Updated plugins view (After Whitelabel)
+
+## Frequently Asked Questions ##
+
+### How does this plugin work ###
+
+This is how the plugin will work for you -
+
+<ul>
+ 	<li> <strong> Single Site: </strong> For the single site setup you will get the `Whitelabel WP Setup` submenu under the settings Menu. </li>
+ 	<li> <strong> Network Setup: </strong> For the Multi (network) site setup you will get the `Whitelabel WP Setup` submenu from the Network Admin Dashboard under the Settings Menu. </li>
+</ul>
+
 ## Installation ##
 
 1. Upload `whitelabel-wp-setup.zip` to the `/wp-content/plugins/` directory

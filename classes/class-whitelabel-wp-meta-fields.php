@@ -71,22 +71,21 @@ if ( ! class_exists( 'Whitelabel_WP_Meta_Fields' ) ) :
             $help_img       = WHITELABEL_WP_CONTENT_DIR . 'assets/img/whitelabel-help-' . $value .  '.png';
 
             switch( $value ) {
-
                 case 'PluginURI':
                 case 'AuthorURI':
                     $type = 'url';
                     $meta_key = esc_url( $meta_key );
-                    break;
+                break;
 
                 case 'Version':
-                    $type = 'number';
-                    $meta_key = esc_attr( $meta_key );
-                    break;
+                    $type = 'text';
+                    $meta_key = floatval( esc_attr( $meta_key ) );
+                break;
 
                 default:
                     $type = 'text';
                     $meta_key = esc_attr( $meta_key );
-                    break;
+                break;
             }
 
             if ( isset( $flag ) && $flag ) {
