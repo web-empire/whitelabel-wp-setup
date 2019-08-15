@@ -271,9 +271,9 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 		 */
 		public function enqueue_whitelabel_scripts( $hook ) {
 
-			wp_register_script( 'whitelabel-wp-content-js', WHITELABEL_WP_CONTENT_URL . 'assets/js/whitelabel-wp-content.js', array( 'jquery', 'jquery-ui-sortable' ), WHITELABEL_WP_CONTENT_VER, true );
+			wp_register_script( 'whitelabel-wp-content-js', WHITELABEL_WP_CONTENT_URL . 'assets/js/whitelabel-wp-content.min.js', array( 'jquery', 'jquery-ui-sortable' ), WHITELABEL_WP_CONTENT_VER, true );
 
-			wp_register_style( 'whitelabel-wp-content-css', WHITELABEL_WP_CONTENT_URL . 'assets/css/whitelabel-wp-content.css', null, WHITELABEL_WP_CONTENT_VER, 'all' );
+			wp_register_style( 'whitelabel-wp-content-css', WHITELABEL_WP_CONTENT_URL . 'assets/css/whitelabel-wp-content.min.css', null, WHITELABEL_WP_CONTENT_VER, 'all' );
 
 			// Localize the script with new data.
 			$translation_array = array(
