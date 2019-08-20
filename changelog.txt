@@ -1,2 +1,5 @@
 Version 1.0.0
 - Initial Release
+
+Version 1.0.1
+- Improvement - Removed limit of 3 plugin - Now number of plugins can be whitelabel
