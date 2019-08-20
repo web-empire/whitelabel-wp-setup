@@ -491,16 +491,7 @@ if ( ! class_exists( 'Whitelabel_WP_Content_Loader' ) ) :
 								<?php
 									esc_html_e( 'This plugin grants you priviledge to update branding of all the plugins on the plugins page.', 'whitelabel-wp-content' );
 								?>
-							</p>
-
-							<p class="description">
-								<?php
-									$get_pro_url = '#';
-									$description_get_pro = '<strong> Note: </strong> With this free version you can whitelabel only <strong> 3 </strong> plugins. For more features <a href="' . esc_url( $get_pro_url ) . '"> Get Pro. </a>';
-									echo wp_kses_post( $description_get_pro );
-								?>
-							</p>
-							
+							</p>							
 						</div>
 
 						<br/><br/>						

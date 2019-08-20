@@ -23,12 +23,6 @@
 			$( document ).on( 'click', '.update_whitelabel_data',	WhitelabelWPContent._whitelabel_data );
 			$( document ).on( 'click', '.whitelabel-wp-content__title', WhitelabelWPContent._toggle_plugin_settings );
 			$( document ).on( 'change', '.required-plugins', WhitelabelWPContent._select_respective_plugins );
-
-			$( '.required-plugins' ).on( 'change', function() {
-				if( $( '.required-plugins:checked' ).length > 3 ) {
-					this.checked = false;
-				}
-			});
 		},
 
 		/**

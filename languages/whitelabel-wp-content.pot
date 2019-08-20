@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the Whitelabel WP Setup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Whitelabel WP Setup 1.0.0\n"
+"Project-Id-Version: Whitelabel WP Setup 1.0.1\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/whitelabel-wp-setup\n"
-"POT-Creation-Date: 2019-08-15 08:55:18+00:00\n"
+"POT-Creation-Date: 2019-08-20 04:27:50+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,41 +55,41 @@ msgid ""
 "the plugins page."
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:528
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:519
 msgid "Save Settings"
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:590
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:581
 msgid "Hide this plugin."
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:591
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:582
 msgid "Whitelabel Themes."
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:592
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:583
 msgid "Get Whitelabelled Child Theme Generator."
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:593
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:584
 msgid "Update Branding Permanently through wp-config file."
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:594
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:585
 msgid "Much More with Improvements."
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:618
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:609
 msgid "Upcoming Features"
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:634
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:625
 msgid ""
 "You can contribute to improvise this plugin or can give us suggessions to "
 "make it more better. Your contribution will highly appreciated!"
 msgstr ""
 
-#: classes/class-whitelabel-wp-themes-plugins-loader.php:640
+#: classes/class-whitelabel-wp-themes-plugins-loader.php:631
 msgid "Send a Suggession »"
 msgstr ""
 

@@ -124,12 +124,14 @@ if ( ! class_exists( 'Whitelabel_WP_Meta_Fields' ) ) :
             $meta_key       = $field_data['value'];
             $label          = isset( $field_data['name'] ) ? $field_data['name'] : '';
             $help           = isset( $field_data['help'] ) ? $field_data['help'] : '';
+            $help_img_url   = WHITELABEL_WP_CONTENT_URL . 'assets/img/whitelabel-help-' . $value .  '.png';
+            $help_img       = WHITELABEL_WP_CONTENT_DIR . 'assets/img/whitelabel-help-' . $value .  '.png';
 
             if ( isset( $flag ) && ! $flag ) {
                 $placeholder    = ' placeholder="' . $meta_key . '" ';
             }
 
-            if ( ! empty( $help ) ) {
+            if ( ! empty( $help ) && file_exists( $help_img ) ) {
 				$field_html     .= '<i class="whitelabel-field-help dashicons dashicons-editor-help">';
 				$field_html     .= '</i>';
 				$field_html     .= '<span class="whitelabel-tooltip-text">';
